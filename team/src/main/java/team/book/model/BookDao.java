@@ -16,6 +16,6 @@ public interface BookDao {
 	public void send (){
 		daskljf;ajfdan;fjna;
 	}
-	//しいけかいしぉいけしぉ
+	//しいけかいしぉいけ
 
 }
