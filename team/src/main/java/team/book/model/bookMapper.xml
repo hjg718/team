@@ -3,7 +3,17 @@
 
 <mapper namespace="team.book.model.BookDao"> 
 
+	<insert id="insert" parameterType="team.book.model.BookVo">
+	<selectKey keyProperty="num" resultType="int" order="BEFORE">
+    	SELECT BOOK_SEQ.nextval FROM DUAL
+  	</selectKey>
+        INSERT INTO Book  
+        	VALUES (#{num}, #{bname}, #{bindex}, #{author}, #{publisher}, #{bcontents}, #{pdate})
+	</insert>
 	<select id="search" resultType="team.book.model.BookVo">
 		SELECT * FROM Book WHERE ${category} LIKE '%'||#{keyword}||'%'
+	</select>
+	<select id="read" resultType="team.book.model.BookVo">
+		SELECT * FROM Book WHERE bname=#{bname}
 	</select>
 </mapper>

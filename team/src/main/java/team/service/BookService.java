@@ -21,5 +21,18 @@ public class BookService {
 		List<BookVo> list= dao.search(keyword,category);
 		return list;
 	}
-	//여기는 서비스입니다
+	
+	public boolean insert(BookVo book){
+		BookDao dao = sqlST.getMapper(BookDao.class);
+		int n = dao.insert(book);
+		boolean insert;
+		
+		if(n>=0){
+			insert = true;
+		}
+		else{
+			insert = false;
+		}
+		return insert;
+	}
 }
