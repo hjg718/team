@@ -16,7 +16,7 @@ function logout(){
 </head>
 <body>
 <sec:authorize access="!isAuthenticated()">
-<a href="user/join">회원가입</a>
+<a href="user/join">회원가입하기</a>
 <a href="user/login">로그인</a>
 </sec:authorize>
 <sec:authorize access="isAuthenticated()">
