@@ -32,6 +32,7 @@ function logout(){
 <option value="bname">제목</option>
 <option value="author">저자</option>
 <option value="publisher">출판사</option>
+	<option value="name"></option>
 </select>
 <input type="text" name="keyword">
 <button type="submit">검색</button>
