@@ -6,6 +6,7 @@
 	<select id="check" resultType="String" >
 		SELECT userid FROM puser WHERE userid=#{id}
 	</select>
+	
 	<insert id="join" parameterType="team.user.model.UserVo">
 		INSERT INTO puser VALUES(PUSER_SEQ.NEXTVAL,#{name},#{id},#{pwd},#{phone},#{gender},#{email},#{authority},'1') 
 	</insert>
