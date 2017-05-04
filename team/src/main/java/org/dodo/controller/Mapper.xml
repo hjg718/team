@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="org.dodo.controller.UserDAO"> <!--이 sql 문장과 매핑될 인터페이스의 완전한 경로 -->
+	
+
+	<select id="login" resultType="org.dodo.controller.UserVO">
+		select id from test_test where id = #{id}
+	</select>
+
+	<insert id="join" parameterType="org.dodo.controller.UserVO">
+	insert into test_test (num,id,pwd,authority)
+	values (TEST_SEQ.NEXTVAL, #{id}, #{pwd}, #{authority} )
+	</insert>
+
+	
+</mapper>
