@@ -11,5 +11,10 @@ public interface BookDao {
 	
 	public List<BookVo> search(@Param("keyword")String keyword,@Param("category")String category);
 	System.out.println(keyword);
+	// 그냥 커밋 누르니까 대던대?
 	
+	public void send (){
+		daskljf;ajfdan;fjna;
+	}
+
 }
