@@ -10,6 +10,6 @@ public interface BookDao {
 
 	
 	public List<BookVo> search(@Param("keyword")String keyword,@Param("category")String category);
-	void syso(keyword);
+	System.out.println(keyword);
 	
 }
